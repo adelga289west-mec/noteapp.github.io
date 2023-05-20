@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            background-color: rgb(168, 164, 164, 0.787);
+
+        }
+
+        .notes{
+            width:99%; 
+            min-height:700px;
+        
+            display: flex;
+            flex-wrap: wrap;
+            border: 5px solid black;
+            border-radius: 50px 50px;
+       
+            justify-content: center;
+            height:auto;
+            margin-left:0.05%;
+            background-color: rgb(206, 147, 70);
+          
+    
+
+        }
+        .notes Div{
+            width:300px;
+            height:300px;
+            background-image: url(Images/stickynote.png);
+            background-size: cover;
+            background-position: center;
+            background-color: rgb(206, 147, 70);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top:30px;
+            
+        }
+        .notes h2{
+            margin-left: 15px;
+      
+            background-color: transparent;
+            font-size:30px;
+        }
+        .notes p{
+            margin-left: 15px;
+   
+            background-color: transparent;
+            font-size: 20px;
+      
+        }
+        #noteForm{
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width:30%;
+            
+        }
+        input{
+            background-color: white;
+            height:20px;
+            
+        }
+        #add{
+            background-color: aqua;
+            height:50px;
+        }
+        label{
+            margin:auto;
+     
+            font-size: 50px;
+        }
+        #top{
+            text-align: center;
+            font-size: 30px;
+        }
+        .notes button{
+            width:130px;
+            height:30px;
+            margin-left:15px;
+      
+            background-color: rgb(212, 5, 5);
+            color:black;
+            font-size: 20px;
+            font-weight: bold;
+           
+      
+        }
+        .notes button:hover{
+            background-color: rgb(152, 4, 4) ;
+        }
+        #clear{
+        
+            width:150px;
+            height:50px;
+            margin:0;
+       
+            border-radius: 50px;
+            background-color: aqua;
+        }
+        #clear:hover{
+            background-color: rgb(4, 200, 200);
+        }
+        #above{
+            display: flex;
+         
+        }
+        #forbtn{
+            position: absolute;
+
+
+        }
+        #forme{
+            margin:auto;
+
+        }
+        #add:hover{
+            background-color: rgb(4, 200, 200);
+        }
+    </style>
+</head>
+<body>
+    <br>
+    
+        <form id="noteForm">
+            <label>Reminders</label>
+            <br>
+            <input type="text" placeholder="Enter Topic" name="topic" required>
+            <input type="text" placeholder="Enter Note" name="note" required>
+        
+            <button id="add">Add Note</button>
+
+        </form>
+        <br>
+        <div id="above">
+            <div id="forbtn">
+        <button id="clear" onclick="buttonPress()">Delete All Notes</button>
+        </div>
+        <div id="forme">
+        <h2 id="top">My Notes</h2>
+        </div>
+        </div>
+        
+        <br>
+        <div class="notes">
+           
+            
+        </div>
+    
+
+
+    
+
+
+    <script src="./noteapp.js"></script>
+</body>
+</html>
